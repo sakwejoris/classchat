@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+/* Wrapper styling */
+#wrapper {
+    max-width: 900px;
+    min-height: 500px;
+    display: flex;
+    margin: auto;
+    font-size: 13px;
+}
+
+/* Left panel styling */
+#left_panel {
+    min-height: 500px;
+    background-color: #2D67FB; 
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+#left_panel label {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+#left_panel label img {
+    width: 25px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile image styling */
+#profile_img {
+    width: 50%;
+    border: 2px solid white; /* Using px for a defined border width */
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* Pics container for the sidebar buttons */
+.Pics img {
+    width: 25%;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Right panel styling */
+#right_panel {
+    flex: 6;
+    min-height: 500px;
+    background-color: #fff;
+}
+
+/* Header section styling */
+#header {
+    background-color: #FFFBFB;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+/* Container for the inner panels */
+#container {
+    display: flex;
+    margin-top: 20px; /* Adds space between the header and container */
+    text-align: left;
+}
+
+/* Left inner panel styling */
+#inner_left_panel {
+    background-color: #fff;
+    flex: 1;
+    min-height: 430px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right inner panel styling */
+#inner_right_panel {
+    background-color: #D9D9D9;
+    flex: 2;
+    min-height: 430px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
