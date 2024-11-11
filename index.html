@@ -3,46 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Project</title>
-    <!-- Link to external CSS -->
+    <title>Snobe Chat App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css">
 </head>
 <body>
-    <div id="wrapper">
-        <div id="left_panel">
-            <img src="/images/399087be-96dc-4327-9991-cce5b94190c4.JPG" alt="profile" id="profile_img">
-            <p>Sakwe Jovi</p>
-            <div class="Pics">
-                <div>
-                    <img src="/images/icons/message.png" alt="chats icon">
-                    <label for="box">Chats</label>
+    <div class="chat-app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile">
+                <div class="icon">👤</div>
+                <span>Profile</span>
+            </div>
+            <div class="settings">
+                <div class="icon">⚙</div>
+                <span>Settings</span>
+            </div>
+            <div class="logout">
+                <div class="icon">🔄</div>
+                <span>Logout</span>
+            </div>
+        </div>
+
+        <!-- Chat List -->
+        <div class="chat-list">
+            <h2>CHATS</h2>
+            <input type="text" placeholder="search">
+            
+            <!-- Existing Chat Items -->
+            <div class="chat-item active">
+                <div class="chat-icon">👤</div>
+                <div class="chat-details">
+                    <p>Sakwe Jovi</p>
+                    <span>10:21pm</span>
+                    <p>How you doing sir</p>
                 </div>
-                <div>
-                    <img src="/images/icons/user.png" alt="contacts icon">
-                    <label for="">Contacts</label>
+            </div>
+            <div class="chat-item">
+                <div class="chat-icon">👤</div>
+                <div class="chat-details">
+                    <p>Weriwoh Naomi</p>
+                    <span>1:40pm</span>
+                    <p>Hello good day</p>
                 </div>
-                <div>
-                    <img src="/images/icons/setting.png" alt="settings icon">
-                    <label for="">Settings</label>
+            </div>
+            <div class="chat-item">
+                <div class="chat-icon">👤</div>
+                <div class="chat-details">
+                    <p>Emile</p>
+                    <span>1:40pm</span>
+                    <p>God bless you</p>
                 </div>
-                <div class="logout">
-                    <img src="/images/icons/logout.png" alt="logout icon">
-                    <label for="">Logout</label>
+            </div>
+
+            <!-- New Chat Items -->
+            <div class="chat-item">
+                <div class="chat-icon">👤</div>
+                <div class="chat-details">
+                    <p>Babila Ivy Rose</p>
+                    <span>9:15am</span>
+                    <p>Good morning!</p>
+                </div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-icon">👤</div>
+                <div class="chat-details">
+                    <p>Mosco F</p>
+                    <span>3:30pm</span>
+                    <p>Let’s meet later</p>
+                </div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-icon">👤</div>
+                <div class="chat-details">
+                    <p>Mr Amstrong</p>
+                    <span>6:00pm</span>
+                    <p>See you soon!</p>
                 </div>
             </div>
         </div>
-        <div id="right_panel">
-            <div id="header"><h1>Chats</h1></div>
-            <div id="container">
-                <div id="inner_left_panel">
-                    <input type="checkbox" id="box">
-                    <label for="box">Enable Notifications</label>
+
+        <!-- Chat Window -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="chat-info">
+                    <div class="chat-icon">👤</div>
+                    <span>Sakwe Jovi</span>
+                    <p>Active</p>
                 </div>
-                <div id="inner_right_panel">
-                    <!-- Chat content goes here -->
+                <div class="chat-actions">
+                    <button>📞</button>
+                    <button>📹</button>
                 </div>
+            </div>
+
+            <div class="chat-messages">
+                <!-- Received Message -->
+                <div class="message received">
+                    <p>Yo bro hafa</p>
+                    <span>10:21pm</span>
+                </div>
+                <div class="message received">
+                    <p>OK</p>
+                    <span>10:21pm</span>
+                </div>
+
+                <!-- Sent Message -->
+                <div class="message sent">
+                    <p>I dey Massa</p>
+                    <span>10:21pm</span>
+                </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="message-input">
+                <form action="save_message.php" method="post">
+                    <input type="text" name="sender" placeholder="Sender" required>
+                    <input type="text" name="receiver" placeholder="Receiver" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                
             </div>
         </div>
     </div>
+
+    
+
+    <script src="main.js"></script>
+    
 </body>
 </html>
